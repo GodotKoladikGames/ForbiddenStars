@@ -2,17 +2,21 @@
 
 [ext_resource type="Script" uid="uid://bxnf6bbygar4k" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dg43drw7bumik" path="res://assets/models/Spacemarin.glb" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bj3bk4ex0jlkx" path="res://assets/models/Ultramarines/Scout.glb" id="3_h2yge"]
 
 [node name="Main" type="Node3D" unique_id=981153227]
 transform = Transform3D(0.50792927, 0, 0.86139876, 0, 1, 0, -0.86139876, 0, 0.50792927, 0, 0, 0)
 script = ExtResource("1_ig7tw")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=31598476]
-transform = Transform3D(0.97740406, -0.039414927, 0.20767331, -0.04949953, 0.9124663, 0.4061467, -0.20550317, -0.40724915, 0.8898971, 0.40877455, 1.5357828, 2.0000367)
+transform = Transform3D(0.8964865, 0.22420903, -0.38215494, 0, 0.86251366, 0.5060338, 0.44307122, -0.45365244, 0.77323186, -3.8814223, 8.572126, 7.8268785)
 current = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=559433053]
-transform = Transform3D(0.978035, -0.20508602, -0.037250847, 0.20508608, 0.914861, 0.34780604, -0.037250787, -0.347806, 0.93682635, -2.3925378, 4.0520525, 3.8652287)
+transform = Transform3D(0.97803485, -0.20508605, -0.037250936, 0.20508602, 0.9148611, 0.347806, -0.037250727, -0.34780607, 0.93682635, -7.307864, 4.0520525, -2.0142937)
 
 [node name="Spacemarin" parent="." unique_id=1935160417 instance=ExtResource("2_0xm2m")]
 transform = Transform3D(0.993925, 0, 0.11006388, 0, 1, 0, -0.11006388, 0, 0.993925, 0, 0, 0)
+
+[node name="Scout" parent="." unique_id=1030703162 instance=ExtResource("3_h2yge")]
+transform = Transform3D(0.5079293, 0, -0.8613989, 0, 1, 0, 0.8613989, 0, 0.5079293, 1.42139, 0, 0.82856166)
