@@ -1,19 +1,18 @@
 [gd_scene format=3 uid="uid://fkfalw5w16xs"]
 
 [ext_resource type="Script" uid="uid://bxnf6bbygar4k" path="res://main.gd" id="1_ig7tw"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dg43drw7bumik" path="res://assets/models/Spacemarin.glb" id="2_0xm2m"]
 
 [node name="Main" type="Node3D" unique_id=981153227]
 transform = Transform3D(0.50792927, 0, 0.86139876, 0, 1, 0, -0.86139876, 0, 0.50792927, 0, 0, 0)
 script = ExtResource("1_ig7tw")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1060105912]
-mesh = SubResource("BoxMesh_ig7tw")
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=31598476]
-transform = Transform3D(0.6851716, -0.2648479, 0.67852485, -0.04949957, 0.9124664, 0.40614662, -0.72669816, -0.31186682, 0.6120861, 2.0885558, 1.5357828, 2.1179469)
+transform = Transform3D(0.97740406, -0.039414927, 0.20767331, -0.04949953, 0.9124663, 0.4061467, -0.20550317, -0.40724915, 0.8898971, 0.40877455, 1.5357828, 2.0000367)
 current = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=559433053]
 transform = Transform3D(0.978035, -0.20508602, -0.037250847, 0.20508608, 0.914861, 0.34780604, -0.037250787, -0.347806, 0.93682635, -2.3925378, 4.0520525, 3.8652287)
+
+[node name="Spacemarin" parent="." unique_id=1935160417 instance=ExtResource("2_0xm2m")]
+transform = Transform3D(0.993925, 0, 0.11006388, 0, 1, 0, -0.11006388, 0, 0.993925, 0, 0, 0)
