@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bxnf6bbygar4k" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dg43drw7bumik" path="res://assets/models/Spacemarin.glb" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bj3bk4ex0jlkx" path="res://assets/models/Ultramarines/Scout.glb" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://3kjut41ictya" path="res://assets/models/OrksEvilSunz/Nobz/Nobz.glb" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://p3os30ek1qwy" path="res://assets/models/OrksEvilSunz/Boyz/Boyz.glb" id="5_7mycd"]
 
 [node name="Main" type="Node3D" unique_id=981153227]
 transform = Transform3D(0.50792927, 0, 0.86139876, 0, 1, 0, -0.86139876, 0, 0.50792927, 0, 0, 0)
@@ -20,3 +22,9 @@ transform = Transform3D(0.993925, 0, 0.11006388, 0, 1, 0, -0.11006388, 0, 0.9939
 
 [node name="Scout" parent="." unique_id=1030703162 instance=ExtResource("3_h2yge")]
 transform = Transform3D(0.5079293, 0, -0.8613989, 0, 1, 0, 0.8613989, 0, 0.5079293, 1.42139, 0, 0.82856166)
+
+[node name="Nobz" parent="." unique_id=1739485613 instance=ExtResource("4_lquwl")]
+transform = Transform3D(0.5079296, 0, -0.8613994, 0, 1, 0, 0.8613994, 0, 0.5079296, 1.4327986, 0, -0.89598244)
+
+[node name="Boyz" parent="." unique_id=1240559464 instance=ExtResource("5_7mycd")]
+transform = Transform3D(0.9429035, 0, -0.33306652, 0, 1, 0, 0.33306652, 0, 0.9429035, -0.30425322, 0, -1.650733)
