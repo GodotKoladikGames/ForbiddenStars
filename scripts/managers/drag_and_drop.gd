@@ -15,7 +15,6 @@ func setup(_world):
 func _update_position():
 	var position = world.get_mouse_pos()
 	object.position = position
-	
 
 func _physics_process(_delta: float) -> void:
 	if object:
