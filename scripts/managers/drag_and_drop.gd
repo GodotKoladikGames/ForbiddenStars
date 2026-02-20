@@ -13,7 +13,7 @@ func setup(_world):
 	world = _world
 
 func _update_position():
-	var position = world.get_mouse_pos()
+	var position: Vector3 = world.get_mouse_pos()
 	if position != null and position.length() < 10:
 		object.position = position
 	else:

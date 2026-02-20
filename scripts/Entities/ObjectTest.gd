@@ -7,7 +7,7 @@ func _input_event(
 	event_position: Vector3,
 	normal: Vector3,
 	shape_idx: int
-):
+) -> void:
 	if OS.has_feature("mobile"):
 		_touchcreen_input_event(camera, event, event_position, normal, shape_idx)
 		return
