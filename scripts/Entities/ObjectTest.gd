@@ -21,9 +21,10 @@ func _mouse_input_event(
 	_shape_idx: int
 ):
 	if _event is InputEventMouseButton:
-		print("Mouse click")
-		return
-	print("Another mouse")
+		if _event.pressed:
+			print("Mouse has pressed")
+		else:
+			print("Mouse has relised")
 
 func _touchcreen_input_event(
 	_camera: Camera3D,
@@ -37,3 +38,4 @@ func _touchcreen_input_event(
 			print("Touchscreen pressed")
 		else:
 			print("Touchscreen unpressed")
+	# print("Another touchscreen")
