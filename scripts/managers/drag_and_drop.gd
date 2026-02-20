@@ -14,7 +14,10 @@ func setup(_world):
 
 func _update_position():
 	var position = world.get_mouse_pos()
-	object.position = position
+	if position != null and position.length() < 10:
+		object.position = position
+	else:
+		drop()
 
 func _physics_process(_delta: float) -> void:
 	if object:
