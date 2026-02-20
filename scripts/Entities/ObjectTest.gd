@@ -22,6 +22,7 @@ func _mouse_input_event(
 ):
 	if _event is InputEventMouseButton:
 		if _event.pressed:
+			DragAndDrop.drag(self)
 			print("Mouse has pressed")
 		else:
 			print("Mouse has relised")
@@ -36,6 +37,7 @@ func _touchcreen_input_event(
 	if _event is InputEventScreenTouch:
 		if _event.pressed:
 			print("Touchscreen pressed")
+			DragAndDrop.drag(self)
 		else:
 			print("Touchscreen unpressed")
 	# print("Another touchscreen")

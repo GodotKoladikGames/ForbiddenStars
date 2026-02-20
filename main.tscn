@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bxnf6bbygar4k" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://b6mc7luyvyvsg" path="res://scripts/Entities/TestBoy.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://pfhilelofri4" path="res://scripts/Entities/world.gd" id="3_h2yge"]
 
 [node name="Main" type="Node3D" unique_id=981153227]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
@@ -17,4 +18,10 @@ transform = Transform3D(0.97803485, -0.20508605, -0.037250936, 0.20508602, 0.914
 [node name="TestObj" parent="." unique_id=749261607 instance=ExtResource("2_0xm2m")]
 transform = Transform3D(0.2774152, 0, 0.96075004, 0, 1, 0, -0.96075004, 0, 0.2774152, -1.5148869, 0, 1.8152136)
 
-[node name="GridMap" type="GridMap" parent="." unique_id=240265002]
+[node name="World" type="Node3D" parent="." unique_id=549710468 node_paths=PackedStringArray("camera")]
+script = ExtResource("3_h2yge")
+camera = NodePath("../Camera3D")
+metadata/_custom_type_script = "uid://pfhilelofri4"
+
+[node name="GridMap" type="GridMap" parent="World" unique_id=240265002]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
