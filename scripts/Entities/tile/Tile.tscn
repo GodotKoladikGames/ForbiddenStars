@@ -1,12 +1,19 @@
 [gd_scene format=3 uid="uid://cg8k21pwqjd4h"]
 
+[ext_resource type="Script" uid="uid://7uauttjiybn8" path="res://scripts/Entities/tile/tile.gd" id="1_0knra"]
 [ext_resource type="Texture2D" uid="uid://bv68p8g2y8n2j" path="res://assets/tiles/3b.tres" id="1_k8qk8"]
+[ext_resource type="Script" uid="uid://bbpmf0oq160wa" path="res://scripts/Entities/tile/sprite3d.gd" id="3_bgd3e"]
 
-[node name="Tile" type="Node3D" unique_id=1250181133]
+[node name="Tile" type="Node3D" unique_id=172681019]
+script = ExtResource("1_0knra")
+number = 5
+metadata/_custom_type_script = "uid://7uauttjiybn8"
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=642097342]
 transform = Transform3D(0.9999998, 0, 0, 0, -4.3711378e-08, 0.99999994, 0, -0.99999976, -4.3711385e-08, 0, 0, 0)
 transparent = false
 double_sided = false
 texture = ExtResource("1_k8qk8")
+region_enabled = true
 region_rect = Rect2(0, 0, 1, 1)
+script = ExtResource("3_bgd3e")
