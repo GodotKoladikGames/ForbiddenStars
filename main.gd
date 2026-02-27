@@ -1,8 +1,10 @@
 extends Node
 
 func _ready():
-	print("ke")
+	var _world = find_child("World")
 	
+
+func battle_test():
 	var array_squad1 = OrksEvilSunz.get_test_squad1()
 	var array_squad2 = Ultramarines.get_test_squad1()
 	var squad1 = UnitGroup.from_array(array_squad1)
