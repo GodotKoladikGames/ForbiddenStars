@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://fkfalw5w16xs"]
 
-[ext_resource type="Script" uid="uid://bxnf6bbygar4k" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://dta5xpqqywd7f" path="res://scripts/Entities/ui/ui_tile_menu.gd" id="1_lquwl"]
 [ext_resource type="Script" uid="uid://c0y41i575f8hi" path="res://scripts/camera.gd" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://pfhilelofri4" path="res://scripts/Entities/world.gd" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://k435j5x6lpdy" path="res://scripts/Entities/world/TileBuilder.gd" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://cxol281tkavxh" path="res://assets/tiles/tile_models/tile_1/TileShape.glb" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cvx04fjl03g38" path="res://scripts/Entities/tile/TileModel.tscn" id="5_7mycd"]
 
 [node name="Main" type="Node3D" unique_id=981153227]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
-script = ExtResource("1_ig7tw")
+script = ExtResource("1_lquwl")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1691949522]
 transform = Transform3D(0.8964865, 0.22420903, -0.38215494, 0, 0.86251366, 0.5060338, 0.44307122, -0.45365244, 0.77323186, -3.8814223, 8.572126, 7.8268785)
@@ -32,5 +32,4 @@ script = ExtResource("4_1bvp3")
 grid = NodePath("../GridMap")
 metadata/_custom_type_script = "uid://k435j5x6lpdy"
 
-[node name="TileShape" parent="." unique_id=1346502930 instance=ExtResource("5_lquwl")]
-transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -0.30317542, 0, 0.37129116)
+[node name="TileModel" parent="." unique_id=151918835 instance=ExtResource("5_7mycd")]
