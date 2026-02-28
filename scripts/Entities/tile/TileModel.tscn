@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cvx04fjl03g38"]
+
+[ext_resource type="PackedScene" uid="uid://cxol281tkavxh" path="res://assets/tiles/tile_models/tile_1/TileShape.glb" id="1_p2w1s"]
+[ext_resource type="Script" uid="uid://bv3yy0ljdjpra" path="res://scripts/Entities/tile/tile_model.gd" id="2_2nrsq"]
+[ext_resource type="Script" uid="uid://c0y41i575f8hi" path="res://scripts/camera.gd" id="2_3dais"]
+[ext_resource type="Script" uid="uid://dta5xpqqywd7f" path="res://scripts/Entities/tile/TileMenu.gd" id="3_7yeha"]
+
+[node name="TileModel" type="Node3D" unique_id=151918835]
+
+[node name="TileShape" parent="." unique_id=174647852 node_paths=PackedStringArray("menu") instance=ExtResource("1_p2w1s")]
+script = ExtResource("2_2nrsq")
+menu = NodePath("../TileControl")
+
+[node name="GameCamera" type="Camera3D" parent="." unique_id=992738798]
+transform = Transform3D(1, 0, 0, 0, 0.81317186, 0.5820236, 0, -0.5820236, 0.81317186, 0, 2.0230565, 2.6177912)
+script = ExtResource("2_3dais")
+metadata/_custom_type_script = "uid://c0y41i575f8hi"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1405499672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5056787, 0)
+
+[node name="TileControl" type="Control" parent="." unique_id=2136097838]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_7yeha")
+metadata/_custom_type_script = "uid://dta5xpqqywd7f"
+
+[node name="FlipButton" type="Button" parent="TileControl" unique_id=307796319]
+layout_mode = 0
+offset_right = 207.0
+offset_bottom = 158.0
+text = "Flip"
+
+[node name="RotateButton" type="Button" parent="TileControl" unique_id=191232917]
+layout_mode = 0
+offset_top = 176.0
+offset_right = 209.0
+offset_bottom = 309.0
+text = "Rotate"
