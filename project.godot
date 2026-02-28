@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 DragAndDrop="*uid://d4plpkorcjio"
 gesture_manager="*uid://de4wojn8bbcgl"
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

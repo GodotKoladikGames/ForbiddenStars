@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcudy5it0lnu2"
-path.s3tc="res://.godot/imported/Tile_3.jpg-c21697b0bfbbfcce3599523352402a3d.s3tc.ctex"
+uid="uid://d36uqbynsbu4e"
+path.s3tc="res://.godot/imported/TileShape_Tile_14.jpg-afe64d2bba8d186e314dc3ff8780ae40.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "0bb5292b28f7c32900d4fd39052ab6ea"
+}
 
 [deps]
 
-source_file="res://assets/tiles/tiles_textures/Tile_3.jpg"
-dest_files=["res://.godot/imported/Tile_3.jpg-c21697b0bfbbfcce3599523352402a3d.s3tc.ctex"]
+source_file="res://assets/tiles/tile_models/tile_1/TileShape_Tile_14.jpg"
+dest_files=["res://.godot/imported/TileShape_Tile_14.jpg-afe64d2bba8d186e314dc3ff8780ae40.s3tc.ctex"]
 
 [params]
 
