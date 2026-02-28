@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://cvx04fjl03g38"]
 
 [ext_resource type="PackedScene" uid="uid://cxol281tkavxh" path="res://assets/tiles/tile_models/tile_1/TileShape.glb" id="1_p2w1s"]
-[ext_resource type="Script" uid="uid://bv3yy0ljdjpra" path="res://scripts/Entities/tile/tile_model.gd" id="2_2nrsq"]
 
 [node name="TileModel" type="Node3D" unique_id=151918835]
 
 [node name="TileShape" parent="." unique_id=174647852 instance=ExtResource("1_p2w1s")]
-script = ExtResource("2_2nrsq")

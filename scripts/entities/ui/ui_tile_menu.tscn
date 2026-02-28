@@ -1,16 +1,12 @@
 [gd_scene format=3 uid="uid://cwnv00rppcfur"]
 
-[ext_resource type="Script" uid="uid://dta5xpqqywd7f" path="res://scripts/Entities/ui/ui_tile_menu.gd" id="1_k6bc8"]
-
-[node name="UiTileMenu" type="Control" unique_id=918331820]
+[node name="UiTileMenu" type="Control" unique_id=806769358]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_k6bc8")
-metadata/_custom_type_script = "uid://dta5xpqqywd7f"
 
 [node name="ButtonFlip" type="Button" parent="." unique_id=538275801]
 layout_mode = 0

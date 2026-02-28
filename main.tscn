@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://fkfalw5w16xs"]
 
-[ext_resource type="Script" uid="uid://dta5xpqqywd7f" path="res://scripts/Entities/ui/ui_tile_menu.gd" id="1_lquwl"]
+[ext_resource type="Script" uid="uid://v67h6vpaa1ax" path="res://scripts/Entities/ui/ui_tile_menu.gd" id="1_lquwl"]
 [ext_resource type="Script" uid="uid://c0y41i575f8hi" path="res://scripts/camera.gd" id="2_1bvp3"]
-[ext_resource type="Script" uid="uid://pfhilelofri4" path="res://scripts/Entities/world.gd" id="3_h2yge"]
-[ext_resource type="Script" uid="uid://k435j5x6lpdy" path="res://scripts/Entities/world/TileBuilder.gd" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://cvx04fjl03g38" path="res://scripts/Entities/tile/TileModel.tscn" id="5_7mycd"]
+[ext_resource type="Script" uid="uid://cpei655xxgrm4" path="res://scripts/Entities/world.gd" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://duywlblkkxk0p" path="res://scripts/Entities/world/TileBuilder.gd" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cvx04fjl03g38" path="res://scripts/entities/tile/TileModel.tscn" id="5_7mycd"]
 
 [node name="Main" type="Node3D" unique_id=981153227]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
@@ -19,9 +19,9 @@ metadata/_custom_type_script = "uid://c0y41i575f8hi"
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=559433053]
 transform = Transform3D(0.97803485, -0.20508605, -0.037250936, 0.20508602, 0.9148611, 0.347806, -0.037250727, -0.34780607, 0.93682635, -7.307864, 4.0520525, -2.0142937)
 
-[node name="World" type="Node3D" parent="." unique_id=549710468]
+[node name="World" type="Node3D" parent="." unique_id=2050206997]
 script = ExtResource("3_h2yge")
-metadata/_custom_type_script = "uid://pfhilelofri4"
+metadata/_custom_type_script = "uid://cpei655xxgrm4"
 
 [node name="GridMap" type="GridMap" parent="World" unique_id=240265002]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
@@ -30,6 +30,5 @@ cell_size = Vector3(10, 10, 10)
 [node name="TileBuilder" type="Node" parent="World" unique_id=257207766 node_paths=PackedStringArray("grid")]
 script = ExtResource("4_1bvp3")
 grid = NodePath("../GridMap")
-metadata/_custom_type_script = "uid://k435j5x6lpdy"
 
 [node name="TileModel" parent="." unique_id=151918835 instance=ExtResource("5_7mycd")]
