@@ -1,4 +1,4 @@
-class_name TileModel extends Node3D
+class_name TileBoxVisual extends Node3D
 
 var player: AnimationPlayer
 var _tween: Tween

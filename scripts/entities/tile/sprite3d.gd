@@ -2,6 +2,7 @@ class_name TileSprite extends Sprite3D
 
 static var textures: Dictionary = load_textures()
 var prop
+
 const _paths = {
 	"1b": "uid://dssaaf0m7aqxh",
 	"2b": "uid://bnmhxfmuqxufx"

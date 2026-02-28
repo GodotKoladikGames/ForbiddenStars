@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c5l08mqf0fqwm" path="res://scripts/entities/tile/tile.gd" id="1_w4wkt"]
 [ext_resource type="Texture2D" uid="uid://dssaaf0m7aqxh" path="res://assets/tiles/1b.tres" id="2_bgd3e"]
-[ext_resource type="Script" uid="uid://deh4c3myf0smv" path="res://scripts/Entities/tile/sprite3d.gd" id="3_bgd3e"]
+[ext_resource type="Script" uid="uid://deh4c3myf0smv" path="res://scripts/entities/tile/sprite3d.gd" id="3_bgd3e"]
 
 [node name="Tile" type="Node3D" unique_id=320891298]
 script = ExtResource("1_w4wkt")

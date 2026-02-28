@@ -1,14 +1,11 @@
 [gd_scene format=3 uid="uid://b6mc7luyvyvsg"]
 
-[ext_resource type="Script" uid="uid://uct7slfei2f0" path="res://scripts/Entities/ObjectTest.gd" id="1_uscr7"]
 [ext_resource type="PackedScene" uid="uid://p3os30ek1qwy" path="res://assets/models/OrksEvilSunz/Boyz/Boyz.glb" id="2_1bl87"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ioopm"]
 height = 1.5068359
 
 [node name="TestBoy" type="StaticBody3D" unique_id=1062582211]
-script = ExtResource("1_uscr7")
-metadata/_custom_type_script = "uid://uct7slfei2f0"
 
 [node name="Boyz" parent="." unique_id=697342933 instance=ExtResource("2_1bl87")]
 

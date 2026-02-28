@@ -1,4 +1,4 @@
-class_name TestObject extends StaticBody3D
+#class_name TestObject extends StaticBody3D
 
 
 func _input_event(

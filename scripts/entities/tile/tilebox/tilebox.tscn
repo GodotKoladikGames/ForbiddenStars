@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cvx04fjl03g38"]
+
+[ext_resource type="Script" uid="uid://bjyhnfa0o0rep" path="res://scripts/entities/tile/tilebox/tilebox.gd" id="1_jvgxm"]
+[ext_resource type="PackedScene" uid="uid://cxol281tkavxh" path="res://assets/tiles/tile_models/tile_1/TileShape.glb" id="1_xkkcb"]
+[ext_resource type="Script" uid="uid://legymupkm165" path="res://scripts/entities/tile/tilebox/tilebox_visual.gd" id="2_0oheq"]
+
+[node name="TileBox" type="Node3D" unique_id=299409134]
+script = ExtResource("1_jvgxm")
+metadata/_custom_type_script = "uid://bjyhnfa0o0rep"
+
+[node name="Visual" parent="." unique_id=174647852 instance=ExtResource("1_xkkcb")]
+script = ExtResource("2_0oheq")

@@ -12,7 +12,7 @@ func _on_long_timeout():
 	long_pressed = true
 	print("long press")
 
-func _unhandled_input(event):
+func _input(event):
 	if event is InputEventScreenTouch:
 		if event.pressed:
 			_last_position = event.position
@@ -34,6 +34,7 @@ func _unhandled_input(event):
 
 
 func _enter_tree() -> void:
+	print("test")
 	_long_timer = Timer.new()
 	_long_timer.one_shot = true
 	add_child(_long_timer)

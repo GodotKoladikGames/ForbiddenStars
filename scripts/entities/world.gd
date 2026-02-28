@@ -12,7 +12,8 @@ func get_mouse_pos() -> Vector3:
 	return pos
 
 func _ready() -> void:
-	DragAndDrop.setup(self)
+	pass
+	#DragAndDrop.setup(self)
 
 func _init() -> void:
 	plane = Plane(Vector3.UP, Vector3.ZERO)
