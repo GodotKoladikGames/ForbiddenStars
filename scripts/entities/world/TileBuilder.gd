@@ -1,9 +1,8 @@
 class_name TileBuilder extends Node
 
-@export var grid: GridMap
+@export var grid: GridTileMap
 
 var tile: TileBox
-var _allowed_points: GridPoints = GridPoints.new()
 var idx: int
 
 func _ready() -> void:
@@ -23,7 +22,6 @@ func rotate_prev_tile():
 	tile.animated_clock_rotate(-PI/2)
 
 func position_next():
-	print("next?")
 	idx = idx + 1
 	var point = get_point()
 	var world_position = grid.map_to_local(Vector3i(point.x, 0, point.y))
@@ -36,19 +34,18 @@ func point_prev():
 
 func assept_tile():
 	var point = get_point()
-	_allowed_points.erase(point)
-	_allowed_points.extend(point)
+	grid.extend(point)
 	idx = idx + 1
-	point = get_point()
+	point = grid.get_allowed_at(idx)
 	tile = create_tile(point.x, point.y)
 
 func get_point() -> Variant:
-	var size = _allowed_points.size()
+	var size = grid.get_allowed_size()
 	if size <= 0:
 		return null
 	if idx >= size:
 		idx = 0
-	return _allowed_points.get_at(idx)
+	return grid.get_allowed_at(idx)
 
 func create_tile(grid_x: int, grid_y: int) -> TileBox:
 	var world_position = grid.map_to_local(Vector3i(grid_x, 0, grid_y))
@@ -57,8 +54,7 @@ func create_tile(grid_x: int, grid_y: int) -> TileBox:
 	return new_tile
 
 func _enter_tree() -> void:
-	pass
+	grid.add_allowed(Vector2i(0, 0))
 
 func _init() -> void:
-	_allowed_points.add(Vector2i(0, 0))
 	idx = 0

@@ -3,9 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d36uqbynsbu4e"
-path.etc2="res://.godot/imported/TileShape_Tile_14.jpg-afe64d2bba8d186e314dc3ff8780ae40.etc2.ctex"
+path.s3tc="res://.godot/imported/TileShape_Tile_14.jpg-afe64d2bba8d186e314dc3ff8780ae40.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/tiles/tile_models/tile_1/TileShape_Tile_14.jpg"
-dest_files=["res://.godot/imported/TileShape_Tile_14.jpg-afe64d2bba8d186e314dc3ff8780ae40.etc2.ctex"]
+dest_files=["res://.godot/imported/TileShape_Tile_14.jpg-afe64d2bba8d186e314dc3ff8780ae40.s3tc.ctex"]
 
 [params]
 

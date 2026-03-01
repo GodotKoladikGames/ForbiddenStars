@@ -32,16 +32,8 @@ func erase(point: Vector2i) -> bool:
 func get_all() -> Array[Vector2i]:
 	return points.keys()
 
-func extend(point: Vector2i):
-	var new_points = [
-		Vector2i(point.x - 1, point.y    ),
-		Vector2i(point.x    , point.y - 1),
-		Vector2i(point.x + 1, point.y    ),
-		Vector2i(point.x    , point.y + 1)
-		]
-	for new_point in new_points:
-		if new_point not in points:
-			self.add(new_point)
+func has(point: Vector2i) -> bool:
+	return points.has(point)
 
 func _has(point: Vector2i) -> bool:
 	return point is Vector2i and points.has(point)
