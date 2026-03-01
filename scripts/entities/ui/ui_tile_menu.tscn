@@ -40,9 +40,9 @@ offset_bottom = 376.0
 text = "Next
 Position"
 
-[node name="ButtonCreate" type="Button" parent="." unique_id=1079923255]
+[node name="ButtonAssept" type="Button" parent="." unique_id=1079923255]
 layout_mode = 0
 offset_top = 384.0
 offset_right = 88.0
 offset_bottom = 472.0
-text = "Create"
+text = "Assept"

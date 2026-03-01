@@ -10,15 +10,21 @@ func animated_flip():
 	_tween.set_trans(Tween.TRANS_SINE)
 	_tween.set_ease(Tween.EASE_IN_OUT)
 	_tween.tween_property(self, "rotation:x", rotation.x + PI, 1)
+	var tween_offset
+	if position.y == 0:
+		tween_offset = -0.075
+	else:
+		tween_offset = 0
+	_tween.parallel().tween_property(self, "position:y", tween_offset, 1)
 	_tween.finished.connect(_on_tween_finished)
 
-func animated_rotate():
+func animated_rotate(angle):
 	if _tween != null and _tween.is_running():
 		return false
 	_tween = create_tween()
 	_tween.set_trans(Tween.TRANS_SINE)
 	_tween.set_ease(Tween.EASE_IN_OUT)
-	_tween.tween_property(self, "rotation:y", rotation.y + PI/2, 1)
+	_tween.tween_property(self, "rotation:y", rotation.y + angle, 1)
 	_tween.finished.connect(_on_tween_finished)
 
 func _on_tween_finished():

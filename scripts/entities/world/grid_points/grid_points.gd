@@ -1,16 +1,31 @@
 class_name GridPoints extends RefCounted
 
-var points: Dictionary[Vector2i, bool] = {}
+var points: Dictionary[Vector2i, int] = {}
+var points_array: Array[Vector2i] = []
+
+func size() -> int:
+	return points_array.size()
+
+func get_at(i: int) -> Vector2i:
+	return points_array[i]
 
 func add(point: Vector2i) -> bool:
-	if point in points:
+	if points.has(point):
 		return false
-	points[point] = true
+	points_array.append(point)
+	points[point] = points_array.size() - 1  # 0-based index
 	return true
 
 func erase(point: Vector2i) -> bool:
-	if point not in points:
+	if not points.has(point):
 		return false
+	var idx: int = points[point]
+	var last_idx: int = points_array.size() - 1
+	var last_point: Vector2i = points_array.pop_back()
+	# swap-remove if not removing last
+	if idx != last_idx:
+		points_array[idx] = last_point
+		points[last_point] = idx
 	points.erase(point)
 	return true
 
@@ -26,7 +41,7 @@ func extend(point: Vector2i):
 		]
 	for new_point in new_points:
 		if new_point not in points:
-			points[new_point] = true
+			self.add(new_point)
 
 func _has(point: Vector2i) -> bool:
 	return point is Vector2i and points.has(point)

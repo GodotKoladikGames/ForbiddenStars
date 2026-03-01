@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bxnf6bbygar4k" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://c0y41i575f8hi" path="res://scripts/camera.gd" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://di7qvx2ojpdy3" path="res://scripts/managers/tile_build_manager.gd" id="3_7mycd"]
 [ext_resource type="Script" uid="uid://cpei655xxgrm4" path="res://scripts/entities/world.gd" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://duywlblkkxk0p" path="res://scripts/entities/world/TileBuilder.gd" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cwnv00rppcfur" path="res://scripts/entities/ui/ui_tile_menu.tscn" id="5_lquwl"]
@@ -12,6 +13,11 @@ script = ExtResource("1_h2yge")
 [node name="World" type="Node3D" parent="." unique_id=1159856369]
 script = ExtResource("3_h2yge")
 metadata/_custom_type_script = "uid://cpei655xxgrm4"
+
+[node name="TileBuildManager" type="Node" parent="World" unique_id=32166327 node_paths=PackedStringArray("builder")]
+script = ExtResource("3_7mycd")
+builder = NodePath("../TileBuilder")
+metadata/_custom_type_script = "uid://di7qvx2ojpdy3"
 
 [node name="TileBuilder" type="Node" parent="World" unique_id=1224750122 node_paths=PackedStringArray("grid")]
 script = ExtResource("4_1bvp3")
@@ -28,4 +34,5 @@ metadata/_custom_type_script = "uid://c0y41i575f8hi"
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1915489873]
 transform = Transform3D(1, 0, 0, 0, 0.9812994, -0.1924877, 0, 0.1924877, 0.9812994, 0, 1.6261158, 2.3433871)
 
-[node name="UiTileMenu" parent="." unique_id=1601714440 instance=ExtResource("5_lquwl")]
+[node name="UiTileMenu" parent="." unique_id=1601714440 node_paths=PackedStringArray("build_manager") instance=ExtResource("5_lquwl")]
+build_manager = NodePath("../World/TileBuildManager")
