@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://nqnwny4wumqg"]
+
+[ext_resource type="Script" uid="uid://c4s5yr2wr6jk1" path="res://scripts/entities/ui/menu_debug/menu_debug.gd" id="1_xt04u"]
+
+[node name="MenuDebug" type="Control" unique_id=464668458]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xt04u")
+metadata/_custom_type_script = "uid://c4s5yr2wr6jk1"
+
+[node name="ButtonTileMenu" type="Button" parent="." unique_id=2083773696]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0

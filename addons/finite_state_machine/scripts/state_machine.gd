@@ -1,6 +1,5 @@
 @icon("../icons/state_machine.svg")
-class_name StateMachine
-extends Node
+class_name StateMachine extends Node
 
 
 ## Node that represents an implementation of the finite state machine pattern.

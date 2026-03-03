@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 DragAndDrop="*uid://d4plpkorcjio"
 gesture_manager="*uid://de4wojn8bbcgl"
+tile_build_manager="*uid://di7qvx2ojpdy3"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/finite_state_machine/plugin.cfg")
 
 [input_devices]
 

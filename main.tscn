@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bxnf6bbygar4k" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://c0y41i575f8hi" path="res://scripts/camera.gd" id="2_1bvp3"]
-[ext_resource type="Script" uid="uid://di7qvx2ojpdy3" path="res://scripts/managers/tile_build_manager.gd" id="3_7mycd"]
 [ext_resource type="Script" uid="uid://cpei655xxgrm4" path="res://scripts/entities/world.gd" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://duywlblkkxk0p" path="res://scripts/entities/world/TileBuilder.gd" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://cnvnjdulxgf2x" path="res://scripts/entities/world/grid_tile_map/grid_tile_map.gd" id="5_272bh"]
-[ext_resource type="PackedScene" uid="uid://cwnv00rppcfur" path="res://scripts/entities/ui/ui_tile_menu.tscn" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://dwqv65m8ieqgg" path="res://addons/finite_state_machine/scripts/state_machine.gd" id="8_5vw27"]
+[ext_resource type="Script" uid="uid://chyqws01kfh0q" path="res://scripts/entities/ui/menu_debug/menu_debug_state.gd" id="8_kek77"]
+[ext_resource type="Script" uid="uid://fuysmwyjvn4c" path="res://scripts/entities/ui/tile_menu/tile_menu_state.gd" id="9_kek77"]
 
 [node name="Main" type="Node3D" unique_id=1596967798]
 script = ExtResource("1_h2yge")
@@ -14,11 +15,6 @@ script = ExtResource("1_h2yge")
 [node name="World" type="Node3D" parent="." unique_id=1159856369]
 script = ExtResource("3_h2yge")
 metadata/_custom_type_script = "uid://cpei655xxgrm4"
-
-[node name="TileBuildManager" type="Node" parent="World" unique_id=32166327 node_paths=PackedStringArray("builder")]
-script = ExtResource("3_7mycd")
-builder = NodePath("../TileBuilder")
-metadata/_custom_type_script = "uid://di7qvx2ojpdy3"
 
 [node name="TileBuilder" type="Node" parent="World" unique_id=1224750122 node_paths=PackedStringArray("grid")]
 script = ExtResource("4_1bvp3")
@@ -37,5 +33,22 @@ metadata/_custom_type_script = "uid://c0y41i575f8hi"
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1915489873]
 transform = Transform3D(1, 0, 0, 0, 0.9812994, -0.1924877, 0, 0.1924877, 0.9812994, 0, 1.6261158, 2.3433871)
 
-[node name="UiTileMenu" parent="." unique_id=1601714440 node_paths=PackedStringArray("build_manager") instance=ExtResource("5_lquwl")]
-build_manager = NodePath("../World/TileBuildManager")
+[node name="UI" type="Control" parent="." unique_id=1365294262]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StateMachine" type="Node" parent="UI" unique_id=850058321 node_paths=PackedStringArray("current_state")]
+script = ExtResource("8_5vw27")
+current_state = NodePath("TileMenuState")
+metadata/_custom_type_script = "uid://dwqv65m8ieqgg"
+
+[node name="TileMenuState" type="Node" parent="UI/StateMachine" unique_id=123777650 node_paths=PackedStringArray("root")]
+script = ExtResource("9_kek77")
+root = NodePath("../..")
+metadata/_custom_type_script = "uid://fuysmwyjvn4c"
+
+[node name="MenuDebugState" type="Node" parent="UI/StateMachine" unique_id=1373082376]
+script = ExtResource("8_kek77")
+metadata/_custom_type_script = "uid://chyqws01kfh0q"

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cwnv00rppcfur"]
 
-[ext_resource type="Script" uid="uid://v67h6vpaa1ax" path="res://scripts/entities/ui/ui_tile_menu.gd" id="1_17h7f"]
+[ext_resource type="Script" uid="uid://v67h6vpaa1ax" path="res://scripts/entities/ui/tile_menu/ui_tile_menu.gd" id="1_17h7f"]
 
 [node name="UiTileMenu" type="Control" unique_id=1601714440]
 layout_mode = 3
@@ -46,3 +46,10 @@ offset_top = 384.0
 offset_right = 88.0
 offset_bottom = 472.0
 text = "Assept"
+
+[node name="ButtonReturn" type="Button" parent="." unique_id=1404562819]
+layout_mode = 0
+offset_top = 480.0
+offset_right = 88.0
+offset_bottom = 568.0
+text = "Return"

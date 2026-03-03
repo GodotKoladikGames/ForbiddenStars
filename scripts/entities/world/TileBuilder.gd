@@ -55,6 +55,8 @@ func create_tile(grid_x: int, grid_y: int) -> TileBox:
 
 func _enter_tree() -> void:
 	grid.add_allowed(Vector2i(0, 0))
+	if tile_build_manager:
+		tile_build_manager.builder = self
 
 func _init() -> void:
 	idx = 0

@@ -5,22 +5,23 @@ var button_assept: Button
 var button_rotate_clock: Button
 var button_rotate_contr_clock: Button
 var button_next_position: Button
-@export var build_manager: TileBuildManager
+static var _scene: PackedScene
+@export var manager: TileBuildManager
 
 func _on_flip_pressed():
-	build_manager.flip_request.emit()
+	manager.flip_request.emit()
 
 func _on_assept_pressed():
-	build_manager.assept_request.emit()
+	manager.assept_request.emit()
 
 func _on_rotate_clock_pressed():
-	build_manager.rotate_next_request.emit()
+	manager.rotate_next_request.emit()
 
 func _on_rotate_contr_clock_pressed():
-	build_manager.rotate_prev_request.emit()
+	manager.rotate_prev_request.emit()
 
 func _on_next_position_pressed():
-	build_manager.position_next_request.emit()
+	manager.position_next_request.emit()
 
 func setup_buttons():
 	button_flip.pressed.connect(_on_flip_pressed)
@@ -36,3 +37,15 @@ func _enter_tree() -> void:
 	button_rotate_contr_clock = get_node("ButtonRotateConrClock")
 	button_next_position = get_node("ButtonNextPosition")
 	setup_buttons()
+	if tile_build_manager:
+		manager = tile_build_manager
+
+static func load_scene():
+	_scene = preload("uid://cwnv00rppcfur")
+
+static func create() -> TileMenu:
+	if _scene == null:
+		load_scene()
+	var scene = _scene.instantiate() as TileMenu
+	return scene
+	
